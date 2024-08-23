@@ -26,74 +26,74 @@ import Menu from "../Menu/Menu";
 import TestIcon from "../../utils/TestIcon";
 
 export default {
-  title: "MDS/Layout/MainContainer",
-  component: MainContainer,
-  argTypes: {},
+    title: "MDS/Layout/MainContainer",
+    component: MainContainer,
+    argTypes: {},
 } as Meta<typeof MainContainer>;
 
 const Template: Story<MainContainerProps> = (args) => {
-  return (
-    <StoryThemeProvider>
-      <GlobalStyles />
-      <MainContainer {...args} />
-    </StoryThemeProvider>
-  );
+    return (
+        <StoryThemeProvider>
+            <GlobalStyles />
+            <MainContainer {...args} />
+        </StoryThemeProvider>
+    );
 };
 
 export const Default = Template.bind({});
 
 Default.args = {
-  children: <Box>This is a Block simulating the content box</Box>,
-  menu: <div>This is where menu goes</div>,
+    children: <Box>This is a Block simulating the content box</Box>,
+    menu: <div>This is where menu goes</div>,
 };
 
 export const NoMenu = Template.bind({});
 
 NoMenu.args = {
-  children: <Box>This is a Block simulating the content box</Box>,
+    children: <Box>This is a Block simulating the content box</Box>,
 };
 
 export const HorizontalMenu = Template.bind({});
 
 HorizontalMenu.args = {
-  children: <Box>This is a Block simulating the content box</Box>,
-  menu: <div>This is where menu goes</div>,
-  horizontal: true,
+    children: <Box>This is a Block simulating the content box</Box>,
+    menu: <div>This is where menu goes</div>,
+    horizontal: true,
 };
 
 export const DisableMobileMode = Template.bind({});
 
 DisableMobileMode.args = {
-  children: <Box>This is a Block simulating the content box</Box>,
-  menu: (
-    <Menu
-      isOpen={true}
-      displayGroupTitles
-      options={[
-        {
-          icon: <TestIcon />,
-          path: "/testPath1",
-          name: "Test 1",
-          group: "Group 1",
-          id: "test1",
-          onClick: (path) => {
-            console.log("Custom Click Action", path);
-          },
-        },
-      ]}
-      applicationLogo={{ applicationName: "console", subVariant: "AGPL" }}
-      callPathAction={(path) => {
-        alert(`Called Path "${path}"`);
-      }}
-      signOutAction={() => {
-        alert("Sign Out!");
-      }}
-      collapseAction={() => {
-        console.log("COLLAPSE!");
-      }}
-      horizontal={false}
-      currentPath={"/testPath1"}
-    />
-  ),
-  mobileModeAuto: false,
+    children: <Box>This is a Block simulating the content box</Box>,
+    menu: (
+        <Menu
+            isOpen={true}
+            displayGroupTitles
+            options={[
+                {
+                    icon: <TestIcon />,
+                    path: "/testPath1",
+                    name: "Test 1",
+                    group: "Group 1",
+                    id: "test1",
+                    onClick: (path) => {
+                        console.log("Custom Click Action", path);
+                    },
+                },
+            ]}
+            applicationLogo={{ applicationName: "console", subVariant: "AGPL" }}
+            callPathAction={(path) => {
+                alert(`Called Path "${path}"`);
+            }}
+            signOutAction={() => {
+                alert("登出!");
+            }}
+            collapseAction={() => {
+                console.log("COLLAPSE!");
+            }}
+            horizontal={false}
+            currentPath={"/testPath1"}
+        />
+    ),
+    mobileModeAuto: false,
 };
