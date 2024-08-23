@@ -23,8 +23,9 @@ import Grid from "../Grid/Grid";
 import { LoginWrapperProps } from "./LoginWrapper.types";
 import { breakPoints } from "../../global/utils";
 
-// const bgVideo = require("../assets/video/videoBG.mp4");
-// const poster = require("../assets/background/loginAnimationPoster.png");
+const bgVideo = require("../assets/video/videoBG.mp4");
+const poster = require("../assets/background/loginAnimationPoster.png");
+const logoPoster = require("../assets/background/logoPoster.jpeg");
 
 const CustomLogin = styled.div(({ theme }) => {
     return {
@@ -124,6 +125,10 @@ const CustomLogin = styled.div(({ theme }) => {
                 alignItems: "center",
                 justifyContent: "center",
                 boxShadow: "0 3px 10px 2px #00000010",
+                "& .imageBG": {
+                    height: "215px",
+                    width: "100%",
+                },
                 "& svg": {
                     width: "325px",
                 },
@@ -197,11 +202,28 @@ const LoginWrapper: FC<LoginWrapperProps> = ({
                             </Grid>
                         </Grid>
                     )}
+                    <Grid item className={"videoContainer"}>
+                        {GPUAvailable && backgroundAnimation ? (
+                            <video
+                                autoPlay
+                                playsInline
+                                muted
+                                loop
+                                disablePictureInPicture
+                                poster={poster}
+                                className={"videoBG"}
+                            >
+                                <source src={bgVideo} type={"video/mp4"} />
+                            </video>
+                        ) : (
+                            <img src={poster} className={"videoBG"} />
+                        )}
+                    </Grid>
                 </Grid>
                 <Grid item xs={12} className={"formPanel"}>
                     <Grid container>
                         <Grid item xs={12} className={"logoContainer"}>
-                            <ApplicationLogo {...logoProps} />
+                            <img src={logoPoster} className="imageBG" />
                         </Grid>
                         <Grid item xs={12} className={"formContainer"}>
                             <Grid item xs className={"form"}>
