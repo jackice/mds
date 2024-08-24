@@ -26,8 +26,8 @@ import MenuSectionHeader from "./MenuSectionHeader";
 import LogoutIcon from "../../Icons/LogoutIcon";
 import Tooltip from "../../Tooltip/Tooltip";
 
-const favicon96 = require("../../assets/background/favicon96.png");
-const favicon32 = require("../../assets/background/favicon32.png");
+const favicon96 = require("../assets/background/favicon96.png");
+const favicon32 = require("../assets/background/favicon32.png");
 const VerticalMenuDrawer = styled.div<MenuConstructProps>(({ theme, sx }) => {
     return {
         width: 250,
