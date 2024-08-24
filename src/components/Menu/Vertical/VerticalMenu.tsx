@@ -20,14 +20,14 @@ import get from "lodash/get";
 import { MenuConstructProps, MenuProps } from "../Menu.types";
 import { lightColors } from "../../../global/themes";
 import Box from "../../Box/Box";
-import ApplicationLogo from "../../ApplicationLogo/ApplicationLogo";
 import CollapseMenuIcon from "../../Icons/CollapseMenuIcon";
 import MenuItem from "./MenuItem";
 import MenuSectionHeader from "./MenuSectionHeader";
 import LogoutIcon from "../../Icons/LogoutIcon";
 import Tooltip from "../../Tooltip/Tooltip";
-import MinIOTierIconXs from "../../Icons/MinIOTierIconXs";
 
+const favicon96 = require("../../assets/background/favicon-96x96.png");
+const favicon32 = require("../../assets/background/favicon-32x32.png");
 const VerticalMenuDrawer = styled.div<MenuConstructProps>(({ theme, sx }) => {
     return {
         width: 250,
@@ -224,12 +224,12 @@ const VerticalMenu: FC<MenuProps> = ({
                         <CollapseMenuIcon />
                     </Box>
                     <Box className={"menuLogoContainer"}>
-                        <ApplicationLogo inverse {...applicationLogo} />
+                        <img src={favicon96} />
                     </Box>
                     <Box className={"collapsedMenuHeader"}>
                         <Tooltip tooltip={"Expand Menu"} placement={"right"}>
                             <span className={"collapsedIcon"}>
-                                <MinIOTierIconXs />
+                                <img src={favicon32} />
                             </span>
                         </Tooltip>
                     </Box>
