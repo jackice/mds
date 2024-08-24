@@ -18,7 +18,6 @@ import React, { FC, useEffect, useState } from "react";
 import get from "lodash/get";
 import styled from "styled-components";
 import { getGPUTier } from "detect-gpu";
-import ApplicationLogo from "../ApplicationLogo/ApplicationLogo";
 import Grid from "../Grid/Grid";
 import { LoginWrapperProps } from "./LoginWrapper.types";
 import { breakPoints } from "../../global/utils";
