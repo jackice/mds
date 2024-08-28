@@ -54,8 +54,8 @@ const DataTableWrapper = styled.div<DataTableWrapperProps>(
         padding: "0 16px 8px",
         boxShadow: "none",
         border: `${disabled
-                ? get(theme, "dataTable.disabledBorder", "#E2E2E2")
-                : get(theme, "dataTable.border", "#E2E2E2")
+            ? get(theme, "dataTable.disabledBorder", "#E2E2E2")
+            : get(theme, "dataTable.border", "#E2E2E2")
             } 1px solid`,
         borderRadius: 3,
         minHeight: 200,
@@ -585,7 +585,7 @@ const DataTable: FC<DataTableProps> = ({
                             <div id={"empty-results"}>
                                 {customEmptyMessage !== ""
                                     ? customEmptyMessage
-                                    : `There are no ${entityName || "items"} yet.`}
+                                    : `还没有 ${entityName || "items"} 数据.`}
                             </div>
                         )}
                     </Fragment>

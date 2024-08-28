@@ -227,7 +227,7 @@ const VerticalMenu: FC<MenuProps> = ({
                         <img src={favicon96} />
                     </Box>
                     <Box className={"collapsedMenuHeader"}>
-                        <Tooltip tooltip={"Expand Menu"} placement={"right"}>
+                        <Tooltip tooltip={"展开菜单"} placement={"right"}>
                             <span className={"collapsedIcon"}>
                                 <img src={favicon32} />
                             </span>

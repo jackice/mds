@@ -110,7 +110,7 @@ const MobileMenuList: FC<MenuProps> = ({
                         <ApplicationLogo inverse {...applicationLogo} />
                     </Box>
                     <Box className={"collapsedMenuHeader"}>
-                        <Tooltip tooltip={"Expand Menu"}>
+                        <Tooltip tooltip={"展开菜单"}>
                             <span className={"collapsedIcon"}>
                                 <MinIOTierIconXs />
                             </span>
